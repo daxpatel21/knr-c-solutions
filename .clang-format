@@ -1,0 +1,17 @@
+# =============================================================================
+# .clang-format — K&R style C formatting
+# =============================================================================
+# Run: clang-format -i src/ex-1-1.c
+# =============================================================================
+
+BasedOnStyle: GNU
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+ColumnLimit: 79
+BreakBeforeBraces: Linux      # opening brace on same line for functions
+SpaceBeforeParens: ControlStatements
+AlignConsecutiveAssignments: false
+AllowShortFunctionsOnASingleLine: None
+AllowShortIfStatementsOnASingleLine: Never
+SortIncludes: false

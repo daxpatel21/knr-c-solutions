@@ -1,0 +1,11 @@
+bin/
+*.o
+*.out
+a.out
+*.swp
+*.swo
+*~
+.viminfo
+.DS_Store
+Thumbs.db
+vgcore.*

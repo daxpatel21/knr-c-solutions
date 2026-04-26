@@ -1,17 +1,57 @@
 # =============================================================================
-# .clang-format — K&R style C formatting
+# .clang-format — Strict K&R C Style
 # =============================================================================
-# Run: clang-format -i src/ex-1-1.c
+# Based on: The C Programming Language, 2nd Ed. by Kernighan & Ritchie
+#
+# Key rules:
+#   - Tabs for indentation (not spaces)
+#   - Function opening brace on NEW line
+#   - if/while/for/do opening brace on SAME line
+#   - Space after keywords (if, while, for, return)
+#   - No space before function call parentheses
+#   - 79 character line limit
 # =============================================================================
 
-BasedOnStyle: GNU
-IndentWidth: 4
-TabWidth: 4
-UseTab: Never
-ColumnLimit: 79
-BreakBeforeBraces: Linux      # opening brace on same line for functions
-SpaceBeforeParens: ControlStatements
-AlignConsecutiveAssignments: false
-AllowShortFunctionsOnASingleLine: None
+BasedOnStyle: LLVM
+
+# Indentation — tabs, width 4
+IndentWidth:        4
+TabWidth:           4
+UseTab:             ForIndentation
+ContinuationIndentWidth: 4
+
+# Line length
+ColumnLimit:        79
+
+# Braces — K&R style
+# Function: brace on NEW line
+# if/while/for: brace on SAME line
+BreakBeforeBraces:  WebKit
+
+# Spaces
+SpaceBeforeParens:          ControlStatements   # space in: if (, while (, for (
+SpaceBeforeCpp11BracedList: false
+SpaceInEmptyParentheses:    false
+SpacesInParentheses:        false
+SpacesInSquareBrackets:     false
+SpaceAfterCStyleCast:       false
+
+# Alignment
+AlignConsecutiveAssignments:    false
+AlignConsecutiveDeclarations:   false
+AlignTrailingComments:          true
+
+# Pointers — K&R puts * with variable name: int *p
+PointerAlignment:   Right
+
+# Short constructs — keep them broken out for clarity
+AllowShortFunctionsOnASingleLine:   None
 AllowShortIfStatementsOnASingleLine: Never
-SortIncludes: false
+AllowShortLoopsOnASingleLine:        false
+AllowShortBlocksOnASingleLine:       Never
+
+# Include order — don't sort, keep as written
+SortIncludes:   false
+
+# Max empty lines
+MaxEmptyLinesToKeep: 1

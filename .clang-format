@@ -15,10 +15,10 @@
 BasedOnStyle: LLVM
 
 # Indentation — tabs, width 4
-IndentWidth:        4
-TabWidth:           4
+IndentWidth:        8
+TabWidth:           8
 UseTab:             ForIndentation
-ContinuationIndentWidth: 4
+ContinuationIndentWidth: 8
 
 # Line length
 ColumnLimit:        79
